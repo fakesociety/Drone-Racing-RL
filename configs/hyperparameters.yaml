@@ -1,0 +1,62 @@
+# =============================================================================
+# Drone Racing RL - Hyperparameters Configuration
+# =============================================================================
+# These hyperparameters were optimized using W&B sweeps to achieve
+# the best lap times (7.3 seconds) on the circular gate course.
+# =============================================================================
+
+# Algorithm
+algorithm: TQC
+
+# Training Settings
+training:
+  total_timesteps: 500_000
+  num_envs: 16
+  eval_frequency: 50_000
+  checkpoint_frequency: 100_000
+  n_eval_episodes: 10
+
+# Model Hyperparameters (Optimized)
+model:
+  gamma: 0.999          # Discount factor - high value for long-horizon racing
+  learning_rate: 0.001  # Learning rate
+  buffer_size: 50_000   # Replay buffer size
+  tau: 0.005            # Soft update coefficient
+  batch_size: 32        # Training batch size
+  
+  # Network Architecture (default)
+  policy: MlpPolicy
+  # net_arch: [256, 256]  # Hidden layer sizes
+
+# Environment Physics
+physics:
+  gravity: -9.81        # m/s^2
+  mass: 1.0             # kg
+  max_thrust: 12.0      # N per motor
+  linear_damping: 0.98  # Velocity damping
+  angular_damping: 0.95 # Angular velocity damping
+  max_linear_velocity: 8.0   # m/s
+  max_angular_velocity: 2.0  # rad/s
+
+# Track Configuration  
+track:
+  num_gates: 5
+  radius: 8.0           # meters
+  center_x: 13.0        # meters
+  center_y: 10.0        # meters
+
+# Reward Weights
+rewards:
+  progress_scale: 100.0
+  velocity_bonus: 0.5
+  gate_crossing: 300.0
+  finish_bonus: 2000.0
+  time_penalty: -0.1
+  crash_penalty: -20.0
+  timeout_penalty: -500.0
+
+# Episode Limits
+limits:
+  max_steps: 1500       # ~30 seconds
+  gate_crossing_dist: 0.5  # meters
+  max_dist_from_gate: 35.0 # meters

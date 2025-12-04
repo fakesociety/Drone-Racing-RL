@@ -1,0 +1,25 @@
+# =============================================================================
+# Core Dependencies
+# =============================================================================
+
+# Deep Learning
+torch>=2.0.0
+
+# Reinforcement Learning
+gymnasium>=0.29.0
+stable-baselines3>=2.0.0
+sb3-contrib>=2.0.0
+
+# Experiment Tracking
+wandb>=0.15.0
+
+# Visualization
+pygame>=2.5.0
+
+# Scientific Computing
+numpy>=1.24.0
+
+# =============================================================================
+# Note: For GPU support, install PyTorch with CUDA:
+# pip install torch --index-url https://download.pytorch.org/whl/cu121
+# =============================================================================
