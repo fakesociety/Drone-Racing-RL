@@ -202,7 +202,7 @@ Training metrics are automatically logged to W&B:
 - Learning curves
 - Model checkpoints
 
-View runs at: [wandb.ai/your-project](https://wandb.ai)
+View runs at: [wandb.ai/My-project]([https://wandb.ai](https://wandb.ai/moty-ruppin-academic-center/drone-racing-final?nw=nwusermoty))
 
 ## 🤝 Contributing
 
@@ -227,7 +227,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-Made with ❤️ and 🤖
+Made with ❤️ by fakesociety 
 
 ⭐ Star this repo if you find it useful!
 </div>
