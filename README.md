@@ -96,12 +96,6 @@ Training takes approximately 30 minutes on an RTX 3070 (500k timesteps).
 | Training Steps | 500,000 |
 | Training Time | ~5 minutes |
 
-### Learning Curve
-
-The agent learns to complete laps within the first 200k steps, then optimizes for speed:
-
-![Training Curve](docs/training_curve.png)
-
 ## 🏗️ Project Structure
 
 ```
@@ -114,8 +108,6 @@ drone-racing-rl/
 ├── training/
 │   ├── train_best_parameters.py   # Hyperparameter search script
 │   └── train_final.py             # Final training script
-├── scripts/
-│   └── manual_control.py          # Keyboard control
 ├── models/
 │   └── best_model.zip             # Pre-trained TQC model
 ├── configs/
@@ -185,8 +177,9 @@ Training metrics are automatically logged to W&B:
 - Lap completion times
 - Learning curves
 - Model checkpoints
-
-View runs at: [wandb.ai/My-project](https://wandb.ai/moty-ruppin-academic-center/drone-racing-final)
+  
+View HyperParameters choosing run at:[wandb.ai/My-project](https://wandb.ai/moty-ruppin-academic-center/drone-racing-final)
+View Best Model train at: [wandb.ai/My-project](https://wandb.ai/moty-ruppin-academic-center/quadai-params-tqc)
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
