@@ -46,12 +46,18 @@ class WandbNoSymlink(WandbCallback):
 # ----------------------
 #  PARAMETER SEARCH CONFIG
 # ----------------------
-params = ["tau", "batch_size"]
+params = ["gamma", "learning_rate", "buffer_size", "tau", "batch_size"]
 
-tau_range = [0.1]
-batch_size_range = [32, 64, 128]
+gamma_range = []
+learning_rate_range = []
+buffer_size_range = [1, 500, 5000, 50000, 500000]
+tau_range = [0.00001, 0.001, 0.1, 0.5, 0.99]
+batch_size_range = [1, 32, 64, 128, 256]
 
 ranges = [
+    gamma_range,
+    learning_rate_range,
+    buffer_size_range,
     tau_range,
     batch_size_range,
 ]
