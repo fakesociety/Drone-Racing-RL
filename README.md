@@ -77,23 +77,6 @@ pip install torch --index-url https://download.pytorch.org/whl/cu121
 python scripts/demo.py
 ```
 
-### Manual Control
-
-```bash
-python scripts/manual_control.py
-```
-
-**Controls:**
-| Key | Action |
-|-----|--------|
-| W / ↑ | Throttle up |
-| S / ↓ | Throttle down |
-| A / ← | Yaw left |
-| D / → | Yaw right |
-| Space | Kill motors |
-| R | Reset |
-| Esc | Quit |
-
 ### Train New Model
 
 ```bash
@@ -111,7 +94,7 @@ Training takes approximately 30 minutes on an RTX 3070 (500k timesteps).
 | Best Lap Time | 7.3 seconds |
 | Average Reward | ~10,000 |
 | Training Steps | 500,000 |
-| Training Time | ~30 minutes |
+| Training Time | ~5 minutes |
 
 ### Learning Curve
 
