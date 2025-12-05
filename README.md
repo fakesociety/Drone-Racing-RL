@@ -111,9 +111,10 @@ drone-racing-rl/
 │   └── environment/
 │       ├── __init__.py
 │       └── drone_racing_env.py    # Gymnasium environment
+├── training/
+│   ├── train_best_parameters.py   # Hyperparameter search script
+│   └── train_final.py             # Final training script
 ├── scripts/
-│   ├── train.py                   # Training script
-│   ├── demo.py                    # Visual demonstration
 │   └── manual_control.py          # Keyboard control
 ├── models/
 │   └── best_model.zip             # Pre-trained TQC model

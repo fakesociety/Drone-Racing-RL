@@ -48,11 +48,11 @@ class WandbNoSymlink(WandbCallback):
 # ----------------------
 params = ["gamma", "learning_rate", "buffer_size", "tau", "batch_size"]
 
-gamma_range = []
-learning_rate_range = []
-buffer_size_range = [1, 500, 5000, 50000, 500000]
-tau_range = [0.00001, 0.001, 0.1, 0.5, 0.99]
-batch_size_range = [1, 32, 64, 128, 256]
+gamma_range = [0.95, 0.99,0.999]
+learning_rate_range = [0.001, 0.0003, 0.0001]
+buffer_size_range = [10000, 50000, 100000]
+tau_range = [0.001, 0.005, 0.01,0.1]
+batch_size_range = [32, 64, 128]
 
 ranges = [
     gamma_range,
