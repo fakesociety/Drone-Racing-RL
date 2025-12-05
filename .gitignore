@@ -64,10 +64,7 @@ Thumbs.db
 # Old/deprecated files (remove from tracking)
 racing_env.py
 run_visual.py
-train_final.py
 manual_control.py
-agent.py
-train.py
 wandb_sweep.yaml
 drone_racing_tqc.zip
 final_training/
