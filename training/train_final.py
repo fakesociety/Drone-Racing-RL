@@ -1,4 +1,5 @@
 import os
+import sys
 import torch
 import wandb
 from wandb.integration.sb3 import WandbCallback
@@ -6,7 +7,10 @@ from sb3_contrib import TQC
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.callbacks import CheckpointCallback, EvalCallback
-from racing_env import DroneRacingEnv
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from src.environment import DroneRacingEnv
 
 
 class WandbNoSymlink(WandbCallback):

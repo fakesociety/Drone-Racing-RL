@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import wandb
 from wandb.integration.sb3 import WandbCallback
@@ -11,7 +12,9 @@ from stable_baselines3.common.callbacks import CheckpointCallback
 # TQC is part of stable-baselines3-contrib
 from sb3_contrib import TQC
 
-from racing_env import DroneRacingEnv
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from src.environment import DroneRacingEnv
 
 
 def print_gpu_info():
